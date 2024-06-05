@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="background">
+    <div class="form-container">
+        <h1>Formulário de Contato</h1>
+        <form action="submit_form.php" method="post" onsubmit="redirectToNextPage()">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function redirectToNextPage() {
+            window.location.href = "form.html"; // Altere "next_page.html" para o nome da sua próxima página
+            return false; // Isso impede o envio padrão do formulário
+        }
+    </script>
+</body>
+</html>
